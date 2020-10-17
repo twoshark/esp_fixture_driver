@@ -3,7 +3,6 @@
 #include "config.h"
 #include "ota.h"
 #include "fixture.h"
-#include "pixel_mapped_output.h"
 #include <Artnet.h>
 #include <Adafruit_NeoPixel.h>
 #include <esp8266wifi.h>
