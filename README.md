@@ -1,31 +1,46 @@
-# Esp Pixel Driver
+# Esp Lighting Fixture Driver
 
-LED Pixel Driver for the ESP8266 Microcontroller
-
-2 mode are available:
-
-- 3 Channel Pixel Mapped LED Data
-- 5 Channel DMX Fixture Configuration
-
-Both may be enabled, but overlap in pins or DMX addresses will result in unpredictable behavoir.
+Lighting Fixture Driver for the ESP8266 Microcontroller
 
 <!-- markdownlint-disable MD001 -->
 
-### Pixel Mapped Artnet Stream
+### Supported Inputs
 
 <!-- markdownlint-enable MD001 -->
 
-The pixel mapped artnet subscriber expects 3 channels of color data per pixel to be applied directly to particular leds.
+- Artnet
+- Hosted File
 
-### DMX Fixture
+### Input Values
 
-The DMX fixture expects 5 channels of data:
+The fixture expects the following config values from an input:
 
-- opacity
-- animation
-- animation subselect
-- speed
-- strobe
+| Value     | Range |
+| --------- | ----- |
+| opacity   | 0-255 |
+| animation | 0-5   |
+| option    | 0-255 |
+| speed     | 0-255 |
+| strobe    | 0-255 |
+
+### ArtNet Fixture
+
+The ArtNet Input Mode expects 5 Chanels of DMX data
+
+| <-- Start Channel \
+| `Opacity` | `Animation` | `Option` | `Speed` | `Strobe` |
+
+### Hosted File
+
+```json
+{
+  "opacity": 255,
+  "animation": 0,
+  "subselect": 0,
+  "speed": 0,
+  "strobe": 0
+}
+```
 
 ## Configuration
 
