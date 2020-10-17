@@ -46,8 +46,7 @@ void Fixture::subscriber(unsigned char *data, unsigned short size)
     unsigned char animation_sub = data[offset + 2];
     unsigned char speed = data[offset + 3];
     unsigned char strobe = data[offset + 4];
-    Serial.println("blergh");
-    //updateConfiguration(opacity, animation, animation_sub, speed, strobe);
+    updateConfiguration(opacity, animation, animation_sub, speed, strobe);
   }
 }
 

@@ -32,11 +32,13 @@ The ArtNet Input Mode expects 5 Chanels of DMX data
 
 ### Hosted File
 
+The Hosted File Input 
+
 ```json
 {
   "opacity": 255,
   "animation": 0,
-  "subselect": 0,
+  "option": 0,
   "speed": 0,
   "strobe": 0
 }
