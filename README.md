@@ -25,14 +25,15 @@ The fixture expects the following config values from an input:
 
 ### ArtNet Fixture
 
-The ArtNet Input Mode expects 5 Chanels of DMX data
+The ArtNet Input Mode expects 5 Chanels of DMX data to set the config values
 
 | <-- Start Channel \
 | `Opacity` | `Animation` | `Option` | `Speed` | `Strobe` |
 
 ### Hosted File
 
-The Hosted File Input 
+The config values maybe pulled from a json file at a given url.
+Example:
 
 ```json
 {
@@ -44,7 +45,7 @@ The Hosted File Input
 }
 ```
 
-## Configuration
+## Driver Configuration
 
 Set the following values in `config.h` before uploading to your microcontroller.
 
